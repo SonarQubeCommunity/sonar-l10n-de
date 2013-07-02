@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.codehaus.sonar-plugins</groupId>
+    <artifactId>parent</artifactId>
+    <version>17</version>
+  </parent>
+
+  <groupId>org.codehaus.sonar-plugins.l10n</groupId>
+  <artifactId>sonar-l10n-de-plugin</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>sonar-plugin</packaging>
+
+  <name>L10n :: German Pack</name>
+  <description>Language Pack for German</description>
+  <url>http://docs.codehaus.org/display/SONAR/German+Pack</url>
+  <inceptionYear>2013</inceptionYear>
+  
+  <organization>
+    <name>SonarSource</name>
+    <url>http://www.sonarsource.com</url>
+  </organization>
+  
+  <licenses>
+    <license>
+      <name>GNU LGPL 3</name>
+      <url>http://www.gnu.org/licenses/lgpl.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://jira.codehaus.org/browse/SONARPLUGINS/component/14774</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:git://github.com/SonarCommunity/sonar-l10n-de.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-l10n-de.git</developerConnection>
+    <url>https://github.com/SonarCommunity/sonar-l10n-de</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <sonar.pluginClass>org.sonar.plugins.l10n.GermanPackPlugin</sonar.pluginClass>
+    <sonar.version>3.5</sonar.version>
+    <!-- Versions of the plugin translated by this language pack -->
+    <bundle.abacus>0.1</bundle.abacus>
+    <bundle.branding>0.4</bundle.branding>
+    <bundle.core>3.5</bundle.core>
+    <bundle.jira>1.1</bundle.jira>
+    <bundle.motionchart>1.4</bundle.motionchart>
+    <bundle.squidjava>1.2</bundle.squidjava>
+    <bundle.violationdensity>1.2</bundle.violationdensity>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-plugin-api</artifactId>
+      <version>${sonar.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-testing-harness</artifactId>
+      <version>${sonar.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Dependencies to plugins which are translated by this language pack -->
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>sonar-abacus-plugin</artifactId>
+      <version>${bundle.abacus}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>sonar-branding-plugin</artifactId>
+      <version>${bundle.branding}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar.plugins</groupId>
+      <artifactId>sonar-core-plugin</artifactId>
+      <version>${bundle.core}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar.plugins</groupId>
+      <artifactId>sonar-l10n-en-plugin</artifactId>
+      <version>${bundle.core}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins.java</groupId>
+      <artifactId>sonar-squid-java-plugin</artifactId>
+      <version>${bundle.squidjava}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>sonar-jira-plugin</artifactId>
+      <version>${bundle.jira}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>sonar-motion-chart-plugin</artifactId>
+      <version>${bundle.motionchart}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>sonar-violationdensity-plugin</artifactId>
+      <version>${bundle.violationdensity}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <developers>
+    <developer>
+      <id>fabrice.bellingard</id>
+      <name>Fabrice Bellingard</name>
+      <organization>SonarSource</organization>
+      <organizationUrl>http://sonarsource.com</organizationUrl>
+    </developer>
+    <developer>
+      <id>simon.brandhof</id>
+      <name>Simon Brandhof</name>
+      <organization>SonarSource</organization>
+      <organizationUrl>http://sonarsource.com</organizationUrl>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Christian Schulz</name>
+    </contributor>
+  </contributors>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.sonar</groupId>
+        <artifactId>sonar-packaging-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <basePlugin>l10nen</basePlugin>
+          <pluginName>German Pack</pluginName>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>native2ascii-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>native2ascii</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-distribution-size</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <phase>verify</phase>
+            <configuration>
+              <rules>
+                <requireFilesSize>
+                  <maxsize>45000</maxsize>
+                  <minsize>40000</minsize>
+                  <files>
+                    <file>${pom.build.directory}/${pom.artifactId}-${pom.version}.jar</file>
+                  </files>
+                </requireFilesSize>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
