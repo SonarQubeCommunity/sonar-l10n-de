@@ -53,7 +53,6 @@
     <bundle.core>4.1</bundle.core>
     <bundle.jira>1.2</bundle.jira>
     <bundle.motionchart>1.5</bundle.motionchart>
-	<bundle.squidjava>1.5</bundle.squidjava>
     <bundle.violationdensity>1.2</bundle.violationdensity>
   </properties>
 
@@ -93,12 +92,6 @@
       <groupId>org.codehaus.sonar.plugins</groupId>
       <artifactId>sonar-l10n-en-plugin</artifactId>
       <version>${bundle.core}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.sonar-plugins.java</groupId>
-      <artifactId>sonar-squid-java-plugin</artifactId>
-      <version>${bundle.squidjava}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
