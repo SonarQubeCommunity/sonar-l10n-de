@@ -1,6 +1,6 @@
 /*
  * L10n :: German Pack
- * Copyright (C) 2013 SonarSource
+ * Copyright (C) 2014 SonarSource
  * dev@sonar.codehaus.org
  *
  * This program is free software; you can redistribute it and/or
