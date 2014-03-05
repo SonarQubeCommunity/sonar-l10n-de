@@ -10,7 +10,7 @@
 
   <groupId>org.codehaus.sonar-plugins.l10n</groupId>
   <artifactId>sonar-l10n-de-plugin</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>sonar-plugin</packaging>
 
   <name>L10n :: German Pack</name>
@@ -40,7 +40,7 @@
     <connection>scm:git:git://github.com/SonarCommunity/sonar-l10n-de.git</connection>
     <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-l10n-de.git</developerConnection>
     <url>https://github.com/SonarCommunity/sonar-l10n-de</url>
-    <tag>sonar-l10n-de-plugin</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
