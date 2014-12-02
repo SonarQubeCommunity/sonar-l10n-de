@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.codehaus.sonar-plugins</groupId>
     <artifactId>parent</artifactId>
-    <version>17</version>
+    <version>18</version>
   </parent>
 
   <groupId>org.codehaus.sonar-plugins.l10n</groupId>
@@ -33,7 +33,7 @@
 
   <issueManagement>
     <system>JIRA</system>
-    <url>http://jira.codehaus.org/browse/SONARPLUGINS/component/16351</url>
+    <url>http://jira.codehaus.org/browse/SONARLOCAL/component/16573</url>
   </issueManagement>
 
   <scm>
@@ -44,15 +44,16 @@
   </scm>
 
   <properties>
-	<sonar.pluginClass>org.sonar.plugins.l10n.GermanPackPlugin</sonar.pluginClass>
-    <sonar.version>4.1</sonar.version>
+    <sonar.pluginClass>org.sonar.plugins.l10n.GermanPackPlugin</sonar.pluginClass>
+    <sonar.version>4.5.1</sonar.version>
     <!-- Versions of the plugin translated by this language pack -->
     <bundle.abacus>0.1</bundle.abacus>
     <bundle.branding>0.4</bundle.branding>
-    <bundle.core>4.1</bundle.core>
+    <bundle.core>4.5.1</bundle.core>
     <bundle.jira>1.2</bundle.jira>
-    <bundle.motionchart>1.5</bundle.motionchart>
+    <bundle.motionchart>1.6</bundle.motionchart>
     <bundle.violationdensity>1.2</bundle.violationdensity>
+    <bundle.java>2.4</bundle.java>
   </properties>
 
   <dependencies>
@@ -82,8 +83,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.sonar.plugins</groupId>
-      <artifactId>sonar-core-plugin</artifactId>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-core</artifactId>
       <version>${bundle.core}</version>
       <scope>test</scope>
     </dependency>
@@ -97,6 +98,12 @@
       <groupId>org.codehaus.sonar-plugins</groupId>
       <artifactId>sonar-jira-plugin</artifactId>
       <version>${bundle.jira}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins.java</groupId>
+      <artifactId>java-checks</artifactId>
+      <version>${bundle.java}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -114,7 +121,7 @@
   </dependencies>
 
   <developers>
-	<developer>
+    <developer>
       <id>christian.schulz</id>
       <name>Christian Schulz</name>
       <organization>Astrium GmbH</organization>
@@ -131,7 +138,7 @@
     <contributor>
       <name>Christian Schulz</name>
     </contributor>
-	<contributor>
+    <contributor>
       <name>Philipp Nestler</name>
     </contributor>
   </contributors>
@@ -159,6 +166,6 @@
           </execution>
         </executions>
       </plugin>
-	</plugins>
+    </plugins>
   </build>
 </project>
