@@ -15,7 +15,7 @@
 
   <name>L10n :: German Pack</name>
   <description>Language Pack for German</description>
-  <url>http://docs.codehaus.org/display/SONAR/German+Pack</url>
+  <url>https://github.com/SonarQubeCommunity/sonar-l10n-de</url>
   <inceptionYear>2014</inceptionYear>
 
   <organization>
@@ -33,13 +33,13 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/SonarCommunity/sonar-l10n-de/issues</url>
+    <url>https://github.com/SonarQubeCommunity/sonar-l10n-de/issues</url>
   </issueManagement>
 
   <scm>
-    <connection>scm:git:git://github.com/SonarCommunity/sonar-l10n-de.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-l10n-de.git</developerConnection>
-    <url>https://github.com/SonarCommunity/sonar-l10n-de</url>
+    <connection>scm:git:git://github.com/SonarQubeCommunity/sonar-l10n-de.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarQubeCommunity/sonar-l10n-de.git</developerConnection>
+    <url>https://github.com/SonarQubeCommunity/sonar-l10n-de</url>
     <tag>HEAD</tag>
   </scm>
 
